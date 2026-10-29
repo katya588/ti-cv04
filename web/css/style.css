@@ -1,0 +1,96 @@
+/* ZMENY OPROTI PÔVODNÉMU SÚBORU (prechod na Bootstrap 5.3)
+   Zmazané, lebo to rieši Bootstrap:
+   - font-family, font-size, line-height, margin v body (reboot Bootstrapu)
+   - nav, nav ul, nav a (flexbox menu, position: fixed) -> navbar, fixed-top, nav-link
+   - header, main, footer (max-width, margin auto, padding) -> trieda container
+   - margin a padding sekcií, border-radius -> triedy mb-4, p-4, rounded v HTML
+   - .sekcia-stitok a position: absolute pri .stitok -> position-relative, position-absolute, top-0, end-0
+   - rozmery štítka (font-size, padding, border-radius) -> trieda badge rounded-pill
+   - h1 font-size a margin, img (max-width, height, padding, margin) -> img-fluid, img-thumbnail, my-3
+   - form, label, fieldset, rozloženie polí, width, box-sizing, padding, border-radius -> form-control, form-select, form-check, mb-3
+   - button (rozmery, zaoblenie, kurzor) -> trieda btn
+   Ponechané: moje farby, .zvyraznene, #tipy, :hover a :focus, odsadenie body. */
+
+/* body: moje farby + odsadenie zhora kvôli menu s fixed-top */
+body {
+  color: #2b2b2b;
+  background-color: #f6f1e7;
+  padding-top: 70px;
+}
+
+/* menu: moja farba pozadia a bielych odkazov */
+.navbar {
+  background-color: #5a2d82;
+}
+
+.navbar .nav-link {
+  color: #ffffff;
+}
+
+/* :hover - pri prejdení myšou sa zmení pozadie a farba písma */
+.navbar .nav-link:hover {
+  background-color: #e8a33d;
+  color: #1f1f1f;
+}
+
+/* nadpisy: h1 a všetky h2 na oboch stránkach */
+h1 {
+  color: #1f4e5f;
+}
+h2 {
+  color: #c4572b;
+}
+
+/* sekcie: farba pozadia */
+main section {
+  background-color: #fffaf0;
+}
+
+/* štítok "Nové": farba pozadia (zvyšok robí Bootstrap) */
+.stitok {
+  background-color: #1f4e5f;
+}
+
+/* zvýraznený odsek */
+.zvyraznene {
+  background-color: #fde9b8;
+  border-left: 5px solid #e8a33d;
+}
+
+/* sekcia s id="tipy" */
+#tipy {
+  border-top: 4px solid #c4572b;
+}
+
+/* rámik obrázka: moja farba */
+.img-thumbnail {
+  border-color: #1f4e5f;
+}
+
+/* polia formulára: moja farba rámika, :focus = farebný rámik a svetlé pozadie */
+.form-control,
+.form-select {
+  border-color: #b9b2a3;
+}
+.form-control:focus,
+.form-select:focus {
+  border-color: #c4572b;
+  background-color: #fff3e0;
+  box-shadow: 0 0 0 0.25rem rgba(196, 87, 43, 0.25);
+}
+
+/* tlačidlo: moje farby a :hover cez premenné Bootstrapu */
+.btn-primary {
+  --bs-btn-bg: #1f4e5f;
+  --bs-btn-border-color: #1f4e5f;
+  --bs-btn-hover-bg: #c4572b;
+  --bs-btn-hover-border-color: #c4572b;
+  --bs-btn-active-bg: #c4572b;
+  --bs-btn-active-border-color: #c4572b;
+}
+
+/* pätička: farba textu a čiary */
+footer {
+  --bs-border-color: #cfc7b5;
+  color: #6b6b6b;
+}
